@@ -4,6 +4,8 @@ package quest
 define: democracy, autocracy, voluntarism
 visit a friend
 brush teeth
+Complete a timed quest
+Fail a quest
 find information you seek
 share information with someone who doesn't know they seek it
 achieve enlightenment

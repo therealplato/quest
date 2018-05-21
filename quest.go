@@ -9,13 +9,25 @@ import (
 // Q is a quest
 type Q struct {
 	T       string
-	Done    bool
+	Success bool
+	Failed  bool
 	History History
 }
 
 func (q *Q) Achieve() {
-	fmt.Println("achieving")
-	q.Done = true
+	if q.Failed {
+		return
+	}
+	fmt.Printf("Quest Achieved: %s\n", q.T)
+	q.Success = true
+}
+func (q *Q) Fail() {
+	if q.Success {
+		return
+	}
+	fmt.Printf("Quest Failed: %s\n", q.T)
+	q.Success = false
+	q.Failed = false
 }
 
 // Log is a hero's quest list

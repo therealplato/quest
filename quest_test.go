@@ -26,5 +26,5 @@ func TestLogContainsQuests(t *testing.T) {
 func TestAchieveQuest(t *testing.T) {
 	q := &Q{T: "get 4 viewers on twitch"}
 	q.Achieve()
-	assert.True(t, q.Done)
+	assert.True(t, q.Success)
 }
