@@ -21,7 +21,7 @@ Notifications at start +t or end -t
 
 CLI API:
 ```
-$ quests
+$ quest log
 Monthly:
  1: pay bill 1
 X2: pay student loan
