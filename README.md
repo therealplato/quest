@@ -53,4 +53,5 @@ quest add brush my teeth
 Phone Notifications for progress reminders
 
 ##### Mid term:
+Track individuals' scores/quest logs
 Share Quests

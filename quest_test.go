@@ -28,7 +28,7 @@ func TestLogContainsQuests(t *testing.T) {
 
 func TestAchieveQuest(t *testing.T) {
 	q := &Q{T: "get 4 viewers on twitch"}
-	q.Achieve()
+	q.Complete()
 	assert.Equal(t, SUCCESS, q.Status)
 }
 
@@ -42,7 +42,7 @@ func TestInProgressQuestCanBeAchieved(t *testing.T) {
 		T:      "brush teeth",
 		Status: PROGRESS,
 	}
-	q.Achieve()
+	q.Complete()
 	assert.Equal(t, SUCCESS, q.Status)
 }
 
@@ -60,7 +60,7 @@ func TestFailedQuestCannotBeAchieved(t *testing.T) {
 		T:      "brush teeth",
 		Status: FAILURE,
 	}
-	q.Achieve()
+	q.Complete()
 	assert.Equal(t, FAILURE, q.Status)
 }
 

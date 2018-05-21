@@ -36,8 +36,8 @@ func (s Status) String() string {
 	return ""
 }
 
-// Achieve marks the quest as done
-func (q *Q) Achieve() {
+// Complete marks the quest as done
+func (q *Q) Complete() {
 	if q.Status != PROGRESS {
 		return
 	}

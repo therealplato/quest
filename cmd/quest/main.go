@@ -27,7 +27,7 @@ func oneQuest(cmd *cobra.Command, params []string) {
 	cmdlen := len(params)
 	if cmdlen == 0 {
 		teeth := quest.Q{T: "brush teeth", Status: quest.PROGRESS}
-		teeth.Achieve()
+		teeth.Complete()
 		fmt.Println(teeth)
 		return
 	}
