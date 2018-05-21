@@ -1,11 +1,21 @@
 package quest
 
-import "github.com/therealplato/subverse"
+import (
+	"fmt"
+
+	"github.com/therealplato/subverse"
+)
 
 // Q is a quest
 type Q struct {
 	T       string
+	Done    bool
 	History History
+}
+
+func (q *Q) Achieve() {
+	fmt.Println("achieving")
+	q.Done = true
 }
 
 // Log is a hero's quest list

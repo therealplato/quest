@@ -6,12 +6,6 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// define: democracy, autocracy, voluntarism
-// visit a friend
-// brush teeth
-// find information you seek
-// share information with someone who doesn't know they seek it
-
 func TestQuest(t *testing.T) {
 	q := Q{T: "visit a friend"}
 	_ = q
@@ -28,3 +22,9 @@ func TestLogContainsQuests(t *testing.T) {
 }
 
 // assert.Equal(t, "Accepted Quest", l.history[0])
+
+func TestAchieveQuest(t *testing.T) {
+	q := &Q{T: "get 4 viewers on twitch"}
+	q.Achieve()
+	assert.True(t, q.Done)
+}
