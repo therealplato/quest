@@ -5,7 +5,7 @@ Your Quest Log
 --------------
 
 #### Status: 
-CLI: In Development
+CLI: In Development  
 GUI: Wanted
 
 #### Possible Quest Tags
@@ -14,7 +14,6 @@ GUI: Wanted
 - Trade
 - Time limit
 - Chain
-- Subquest
 - Newbie
 
 #### Example Quests:
@@ -34,7 +33,7 @@ GUI: Wanted
 - Fail a quest
 - Complete a quest
 - Complete a quest chain (a quest with a prerequisite)
-- Complete a compound quest (a quest with a parent)
+- Complete a compound quest (a subquest)
 - Complete a timed quest
 - Complete a multiparty quest
 - Complete a quest with the tag "Newbie"
@@ -50,5 +49,8 @@ quest 1 done
 quest add brush my teeth
 ```
 
-##### Long term:
+##### Short term:
 Phone Notifications for progress reminders
+
+##### Mid term:
+Share Quests
