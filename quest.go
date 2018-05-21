@@ -5,9 +5,9 @@ import (
 )
 
 const (
-	FAILURE  = -1
-	PROGRESS = 0
-	SUCCESS  = 1
+	FAILURE  Status = -1
+	PROGRESS Status = 0
+	SUCCESS  Status = 1
 )
 
 // Q is a quest
@@ -15,9 +15,24 @@ type Q struct {
 	// T is the text of the quest
 	T string
 	// Status is -1 if quest failed, 0 in progress, 1 success
-	Status int
+	Status Status
 	// History is what progress you've made
 	History History
+}
+
+type Status int
+
+func (s Status) String() string {
+	switch s {
+	case FAILURE:
+		return "X"
+	case PROGRESS:
+		return " "
+	case SUCCESS:
+		// return "✓"
+		return "+"
+	}
+	return ""
 }
 
 // Achieve marks the quest as done
