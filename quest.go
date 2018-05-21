@@ -13,6 +13,7 @@ const (
 // Q is a quest
 type Q struct {
 	// T is the text of the quest
+	// TODO: How to handle tasks/subquests?
 	T string
 	// Status is -1 if quest failed, 0 in progress, 1 success
 	Status Status

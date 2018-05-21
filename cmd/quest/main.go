@@ -17,8 +17,9 @@ var root = &cobra.Command{
 
 func main() {
 	root.AddCommand(add)
+	// TODO: alias list|log
 	root.AddCommand(list)
-	// Make cobra route to root.Run as a catchall route
+	// TODO: Make cobra route to root.Run as a catchall route
 	root.Execute()
 }
 

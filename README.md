@@ -1,27 +1,47 @@
 therealplato/quest
 ==================
 
-Personal Quest:
-Brush my teeth
+Your Quest Log
+--------------
 
-Daily Quest:
-Brush my teeth
+#### Status: 
+CLI: In Development
+GUI: Wanted
 
-Social Quests:
-3 normal ppl talking
-Share a quest
-Buy
-Sell
+#### Possible Quest Tags
+- Daily
+- Social
+- Trade
+- Time limit
+- Chain
+- Subquest
+- Newbie
 
-Compound Quest? Metaquest?
-Accomplish this list of subquests
+#### Example Quests:
+- Brush my teeth
+- Have a conversation with more than 2 ppl
+- Have 4 Twitch Viewers
+- Have 50 Twitch followers
+- Fill a role on your Organic Farm
+  - Post Quest "Work on a Farm"
+	- Have 5 people complete above quest
+- Work on a Farm
 
-Later:
-Notifications at start +t or end -t
+#### Achievements
+- Create a quest
+- Tag a quest
+- Share a quest
+- Fail a quest
+- Complete a quest
+- Complete a quest chain (a quest with a prerequisite)
+- Complete a compound quest (a quest with a parent)
+- Complete a timed quest
+- Complete a multiparty quest
+- Complete a quest with the tag "Newbie"
 
-CLI API:
+#### Proposed CLI API:
 ```
-$ quest log
+$ quest list|log
 Monthly:
  1: pay bill 1
 X2: pay student loan
@@ -29,3 +49,6 @@ X2: pay student loan
 quest 1 done
 quest add brush my teeth
 ```
+
+##### Long term:
+Phone Notifications for progress reminders
