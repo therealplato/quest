@@ -18,16 +18,11 @@ var root = &cobra.Command{
 func main() {
 	root.AddCommand(add)
 	root.AddCommand(list)
+	// Make cobra route to root.Run as a catchall route
 	root.Execute()
 }
 
 func oneQuest(cmd *cobra.Command, params []string) {
-	// $ quest 1 done
-	// $ quest 1 active?
-	// $ quest 1 lfg
-	// $ quest 1 details
-	// $ quest 999 details
-	// $ quest 1 restart/reset
 	cmdlen := len(params)
 	if cmdlen == 0 {
 		teeth := quest.Q{T: "brush teeth", Status: quest.PROGRESS}
@@ -35,12 +30,19 @@ func oneQuest(cmd *cobra.Command, params []string) {
 		fmt.Println(teeth)
 		return
 	}
+
 	command := params[1]
 	i, err := strconv.Atoi(command)
 	if err != nil {
-		// do things for quest i
-		_ = i
-		fmt.Printf("quest %d: \n", i)
+		fmt.Println("which quest?")
 		return
 	}
+	// do things for quest i
+	fmt.Printf("quest %d: ready to rock\n", i)
+	// $ quest 1 done
+	// $ quest 1 active?
+	// $ quest 1 lfg
+	// $ quest 1 details
+	// $ quest 999 details
+	// $ quest 1 restart/reset
 }
