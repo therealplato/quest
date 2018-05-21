@@ -13,7 +13,7 @@ var list = &cobra.Command{
 }
 
 func listHandler(cmd *cobra.Command, params []string) {
-	fmt.Println(`Quests:
+	s := `Quests:
 	1 visit a friend
 	2 brush teeth
 	find a nearby hero
@@ -31,5 +31,6 @@ func listHandler(cmd *cobra.Command, params []string) {
 	share information with someone who doesn't know they seek it
 	achieve enlightenment
 	communicate a scientific truth
-`)
+`
+	fmt.Println(s)
 }

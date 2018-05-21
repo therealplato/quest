@@ -38,3 +38,10 @@ type Log struct {
 
 // History describes quest progress
 type History []string
+
+func (h History) MostRecent() string {
+	if len(h) == 0 {
+		return ""
+	}
+	return h[len(h)-1]
+}

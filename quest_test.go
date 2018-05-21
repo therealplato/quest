@@ -28,3 +28,8 @@ func TestAchieveQuest(t *testing.T) {
 	q.Achieve()
 	assert.True(t, q.Success)
 }
+
+func TestMostRecent(t *testing.T) {
+	h := History{"a", "b"}
+	assert.Equal(t, "b", h.MostRecent())
+}
